@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Complaint Register</title>
+    <link rel="stylesheet" href="complaint.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Service Complaint Register</h1>
+        <form id="complaintForm"  method="post" action="https://script.google.com/macros/s/AKfycbwXmZTzfjVrFB3puRYjz3qWV0Q0XI_f1xO4Jgu56yTviFx8fDfarR1W3t4ugafmrFXtag/exec">
+            <label for="machineSerialNo">Machine Serial No:</label>
+            <input type="text" name="machine-no" id="machineSerialNo" required>
+
+            <label for="customerName">Customer Name:</label>
+            <input type="text" name="customer-name" id="customerName" required>
+
+            <label for="projectName">Project Name:</label>
+            <input type="text" name="project-name" id="projectName" required>
+
+            <label for="projectLocation">Project Location:</label>
+            <input type="text" name="project-location" id="projectLocation" required>
+
+            <label for="salesPerson">Sales Person:</label>
+            <input type="text" name="sales-person" id="salesPerson" required>
+
+            <label for="natureOfComplaint">Nature of Complaint:</label>
+            <textarea id="natureOfComplaint" name="nature-of-complaint" required></textarea>
+
+            <label for="unitModel">Unit Model:</label>
+            <input type="text" name="unit-model" id="unitModel" required>
+
+            <label for="departmentOfComplaint">Department of Complaint:</label>
+            <input type="text" name="department-of-compalaint" id="departmentOfComplaint" required>
+
+            <label for="priority">Priority:</label>
+            <select id="priority" name="option" required>
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+            </select>
+
+            <label for="contactNo">Contact No:</label>
+            <input type="tel" name="contact" id="contactNo" required>
+
+            <label for="informationDate">Information Date:</label>
+            <input type="date" name="information-date" id="informationDate" required>
+
+            <label for="complaintAttendedDate">Complaint Attended Date:</label>
+            <input type="date" name="complaint-date" id="complaintAttendedDate" required>
+
+            <label for="completionDate">Completion Date:</label>
+            <input type="date" name="completion-date" id="completionDate">
+
+            <label for="resolution">Resolution of the Complaint:</label>
+            <textarea id="resolution" name="resolution-of-complaint"></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+        <div id="response"></div>
+        <button id="downloadPDF">Download PDF</button>
+    </div>
+
+    
+    <script src="complaint.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" integrity="sha512-qZvrmS2ekKPF2mSznTQsxqPgnpkI4DNTlrdUmTzrDgektczlKNRRhy5X5AAOnx5S09ydFYWWNSfcEqDTTHgtNA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.debug.js"></script>
+</body>
+</html>
